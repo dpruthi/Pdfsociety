@@ -1,8 +1,5 @@
-package com.navjot.deepak.manpreet.pdfsociety.Activities.NavDrawer;
+package com.navjot.deepak.manpreet.pdfsociety.Activities;
 
-import android.app.ActionBar;
-import android.app.SearchManager;
-import android.content.Context;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.content.Intent;
@@ -13,12 +10,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.SearchView;
 import android.util.Log;
-import android.view.Gravity;
-import android.view.MenuInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -26,20 +20,17 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.navjot.deepak.manpreet.pdfsociety.Activities.MadeByActivity;
 import com.navjot.deepak.manpreet.pdfsociety.Activities.UploadPdfActivity;
+import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
-import com.navjot.deepak.manpreet.pdfsociety.Activities.FeedbackActivity;
-import com.navjot.deepak.manpreet.pdfsociety.Activities.SignIn;
 import com.navjot.deepak.manpreet.pdfsociety.Fragments.MyPdfsFragment;
 import com.navjot.deepak.manpreet.pdfsociety.Fragments.RecentPdfsFragment;
 import com.navjot.deepak.manpreet.pdfsociety.R;
 import java.io.File;
-import java.util.zip.Inflater;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,
         View.OnClickListener

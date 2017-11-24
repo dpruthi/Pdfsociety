@@ -2,37 +2,24 @@ package com.navjot.deepak.manpreet.pdfsociety.Services;
 
 import android.app.PendingIntent;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Environment;
 import android.os.IBinder;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 import android.webkit.MimeTypeMap;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.StreamDownloadTask;
-import com.google.firebase.storage.UploadTask;
-import com.navjot.deepak.manpreet.pdfsociety.Activities.NavDrawer.HomeActivity;
-import com.navjot.deepak.manpreet.pdfsociety.Activities.PdfDetailActivity;
 import com.navjot.deepak.manpreet.pdfsociety.R;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-
-
-
-import com.google.firebase.storage.StorageReference;
 
 public class MyDownloadService extends MyBaseTaskService{
 

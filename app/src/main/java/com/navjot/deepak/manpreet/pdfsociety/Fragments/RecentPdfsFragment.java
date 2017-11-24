@@ -5,18 +5,14 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.navjot.deepak.manpreet.pdfsociety.Activities.NavDrawer.HomeActivity;
 import com.navjot.deepak.manpreet.pdfsociety.Models.Pdf;
 import com.navjot.deepak.manpreet.pdfsociety.Adapters.PdfAdapter;
 import com.navjot.deepak.manpreet.pdfsociety.R;
-
-import java.util.ArrayList;
 
 public class RecentPdfsFragment extends PdfListFragment {
 

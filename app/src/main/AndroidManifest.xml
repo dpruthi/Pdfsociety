@@ -44,7 +44,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activities.NavDrawer.HomeActivity"
+            android:name=".Activities.HomeActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="PDF Society"
             android:theme="@style/AppTheme.NoActionBar" />

@@ -16,7 +16,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 import com.google.firebase.auth.FirebaseUser;
-import com.navjot.deepak.manpreet.pdfsociety.Activities.NavDrawer.HomeActivity;
 import com.navjot.deepak.manpreet.pdfsociety.R;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -53,7 +52,7 @@ public class SignIn extends Progressdialog {
         if(user != null){
             if (user.isEmailVerified()){
                 startActivity(new Intent(getApplicationContext(), HomeActivity.class));
-                //finish();
+                finish();
             }
         }
     }
