@@ -73,10 +73,10 @@
         <activity
             android:name=".Activities.UserDetailActivity"
             android:label="User" />
-        <activity android:name=".Activities.MadeByActivity"
-           android:label="Made by"
-            >
-        </activity>
+        <activity
+            android:name=".Activities.MadeByActivity"
+            android:label="Made by"></activity>
+        <activity android:name=".Activities.ResetPassword"></activity>
     </application>
 
 </manifest>
