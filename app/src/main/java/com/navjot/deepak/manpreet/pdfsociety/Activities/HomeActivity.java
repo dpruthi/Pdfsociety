@@ -1,5 +1,6 @@
 package com.navjot.deepak.manpreet.pdfsociety.Activities;
 
+import android.content.pm.PackageManager;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.content.Intent;
@@ -170,7 +171,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         if (id == R.id.nav_downloads){
 
-
+            Intent launchIntent = getPackageManager().getLaunchIntentForPackage(PackageManager.FEATURE_CAMERA);
+            if (launchIntent != null) {
+                startActivity(launchIntent);//null pointer check in case package name was not found
+            }
 
 
         }
