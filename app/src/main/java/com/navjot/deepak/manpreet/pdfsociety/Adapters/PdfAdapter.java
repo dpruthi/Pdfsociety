@@ -49,6 +49,16 @@ public class PdfAdapter extends RecyclerView.Adapter<PdfViewHolder> implements F
         Log.d("Pdfsociety", "checkNoPdf");
     }
 
+    private void checkNoResultFound(){
+        if(pdfList.isEmpty()){
+            Nopdf.setText("No Results Found");
+            Nopdf.setVisibility(View.VISIBLE);
+        }
+        else {
+            Nopdf.setVisibility(View.GONE);
+        }
+    }
+
     @Override
     public PdfViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         mProgressBar.setVisibility(View.GONE);
@@ -79,6 +89,9 @@ public class PdfAdapter extends RecyclerView.Adapter<PdfViewHolder> implements F
                 // Launch PdfDetailActivity
                 Intent intent = new Intent(v.getContext(), PdfDetailActivity.class);
                 intent.putExtra("pdfkey", PdfKey);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 v.getContext().startActivity(intent);
             }
         });
@@ -119,8 +132,8 @@ public class PdfAdapter extends RecyclerView.Adapter<PdfViewHolder> implements F
 
             @Override
             protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
-
                 pdfList = (ArrayList<Pdf>) filterResults.values;
+                checkNoResultFound();
                 notifyDataSetChanged();
             }
         };

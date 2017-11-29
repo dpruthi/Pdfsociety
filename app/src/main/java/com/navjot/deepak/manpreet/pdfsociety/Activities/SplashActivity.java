@@ -22,7 +22,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_splash);
-        if(FirebaseAuth.getInstance().getCurrentUser() !=null){
+        if(FirebaseAuth.getInstance().getCurrentUser() !=null && FirebaseAuth.getInstance().getCurrentUser().isEmailVerified()){
             handler.sendEmptyMessageDelayed(102,2000);
         }
         else{

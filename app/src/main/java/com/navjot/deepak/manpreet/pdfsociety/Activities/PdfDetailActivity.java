@@ -26,7 +26,6 @@ import com.navjot.deepak.manpreet.pdfsociety.Models.Pdf;
 import com.navjot.deepak.manpreet.pdfsociety.R;
 import com.navjot.deepak.manpreet.pdfsociety.Services.MyDownloadService;
 
-
 public class PdfDetailActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView userName;
@@ -154,6 +153,13 @@ public class PdfDetailActivity extends AppCompatActivity implements View.OnClick
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(PdfDetailActivity.this, HomeActivity.class));
+        finish();
     }
 
     public boolean onSupportNavigateUp() {

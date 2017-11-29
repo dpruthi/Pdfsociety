@@ -110,6 +110,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
             if (doubleBackToExitPressedOnce) {
                 super.onBackPressed();
+                finish();
                 return;
             }
 
@@ -128,7 +129,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onDestroy() {
         super.onDestroy();
-//        //finish();
+        Log.d("Pdfsociety", "onDestroy: ");
+//        finish();
 //        System.exit(0);
 //
 

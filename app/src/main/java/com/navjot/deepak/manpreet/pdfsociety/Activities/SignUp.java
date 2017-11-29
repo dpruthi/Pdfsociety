@@ -255,6 +255,7 @@ public class SignUp extends Progressdialog implements DatePickerDialog.OnDateSet
 
         String date = "" + dayOfMonth + "/" + (++monthOfYear) + "/" + year;
         btnPickDate.setText(date);
+
     }
 
 }

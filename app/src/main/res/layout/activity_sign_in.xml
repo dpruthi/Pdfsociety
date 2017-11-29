@@ -7,102 +7,109 @@
     android:layout_height="match_parent"
     tools:context="com.navjot.deepak.manpreet.pdfsociety.Activities.PdfDetailActivity">
 
-<LinearLayout
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:weightSum="1"
-    android:padding="16dp">
-
-
-    <TextView
-        android:id="@+id/textViewTitle"
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="WELCOME"
-        android:textSize="24dp"
-        android:gravity="center"
-        android:layout_marginTop="20dp"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:weightSum="1">
 
-    <TextView
-        android:id="@+id/textViewSignIn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Please Sign in to continue"
-        android:layout_marginTop="30dp"
-        android:gravity="center"/>
 
-    <android.support.design.widget.TextInputLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        >
-        <EditText
-            android:id="@+id/EditTextEmail"
+        <TextView
+            android:id="@+id/textViewTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:hint="Email" />
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="WELCOME"
+            android:textSize="24dp" />
 
-    </android.support.design.widget.TextInputLayout>
-
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        app:passwordToggleEnabled="true"
-        >
-
-        <EditText
-            android:id="@+id/EditTextPassword"
-            android:inputType="textPassword"
+        <TextView
+            android:id="@+id/textViewSignIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password" />
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Please Sign in to continue" />
 
-    </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+
+            <EditText
+                android:id="@+id/EditTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/EditTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+        </android.support.design.widget.TextInputLayout>
 
         <Button
-            android:theme="@style/ButtonStyle"
             android:id="@+id/ButtonSignIn"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="45dp"
-            android:text="Sign In" />
+            android:text="Sign In"
+            android:theme="@style/ButtonStyle" />
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="45dp"
-        android:layout_gravity="center"
-        >
 
-        <TextView android:id="@+id/textView1"
-            android:layout_width="wrap_content"
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
 
-            android:text="Dont have an account, Click"
-            />
+            <TextView
+                android:id="@+id/resetpwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:onClick="onreset"
+                android:background="@color/offwhite"
+                android:text="Forgot Password ?"
+                android:textColor="@color/colorPrimary"
 
-        <TextView android:id="@+id/textViewHere"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="here"
-            android:background="@color/offwhite"
-            android:textColor="@color/colorPrimary"
-            android:clickable="true"
-            android:onClick="onclick"
-            android:layout_marginLeft="3dp"
-            android:layout_toRightOf="@+id/textView1"  />
+                />
+
+            <TextView
+                android:id="@+id/textViewHere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@+id/textView1"
+                android:background="@color/offwhite"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:onClick="onclick"
+                android:text="Dont have an account, Click here"
+                android:textColor="@color/colorPrimary" />
+
+
+        </LinearLayout>
+
+
     </LinearLayout>
-
-
-
-
-
-</LinearLayout>
 </ScrollView>

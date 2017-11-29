@@ -14,6 +14,8 @@ import com.navjot.deepak.manpreet.pdfsociety.Models.Pdf;
 import com.navjot.deepak.manpreet.pdfsociety.Adapters.PdfAdapter;
 import com.navjot.deepak.manpreet.pdfsociety.R;
 
+import java.util.ArrayList;
+
 public class RecentPdfsFragment extends PdfListFragment {
 
     public RecentPdfsFragment() {}
@@ -29,6 +31,7 @@ public class RecentPdfsFragment extends PdfListFragment {
                     .addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
+                            ArrayList<Pdf> pdfList = new ArrayList<>();
                             for (DataSnapshot postSnapShot : dataSnapshot.getChildren()) {
                                 pdf = postSnapShot.getValue(Pdf.class);
                                 pdfList.add(pdf);

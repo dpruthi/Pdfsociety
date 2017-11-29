@@ -138,4 +138,12 @@ public class SignIn extends Progressdialog {
         startActivity(new Intent(SignIn.this, SignUp.class));
     }
 
+    public void onreset(View view) {
+
+        startActivity(new Intent(SignIn.this, ResetPassword.class));
+
+
+    }
+
+
 }

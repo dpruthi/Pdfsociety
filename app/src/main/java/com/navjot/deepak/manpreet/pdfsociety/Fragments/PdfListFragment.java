@@ -37,7 +37,6 @@ public abstract class PdfListFragment extends Fragment {
     protected LinearLayoutManager mManager;
     protected ProgressBar mProgressBar;
     TextView Nopdf;
-    ArrayList<Pdf> pdfList;
     Pdf pdf;
     SearchView searchView;
 
@@ -54,15 +53,12 @@ public abstract class PdfListFragment extends Fragment {
         super.onCreateView(inflater, container, savedInstanceState);
         View rootView = inflater.inflate(R.layout.fragment_all_pdfs, container, false);
 
-        pdfList = new ArrayList<>();
         Nopdf = rootView.findViewById(R.id.Nopdf);
         mProgressBar = rootView.findViewById(R.id.mProgressBar);
         mDatabase = FirebaseDatabase.getInstance().getReference();
         mRecycler =  rootView.findViewById(R.id.messages_list);
         mRecycler.setHasFixedSize(true);
         return rootView;
-
-
     }
 
     @Override

@@ -73,6 +73,7 @@ public class MyPdfsFragment extends PdfListFragment {
                     .addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
+                            ArrayList<Pdf> pdfList = new ArrayList<>();
                             for (DataSnapshot postSnapShot : dataSnapshot.getChildren()) {
                                 pdf = postSnapShot.getValue(Pdf.class);
                                 pdfList.add(pdf);
