@@ -172,12 +172,15 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         if (id == R.id.nav_downloads){
 
-            Intent launchIntent = getPackageManager().getLaunchIntentForPackage(MediaStore.Files);
+           /* Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.oppo.filemanager").addCategory(".pdf");
             if (launchIntent != null) {
                 startActivity(launchIntent);//null pointer check in case package name was not found
             }
+*/
 
-
+         /*  Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+           intent.setType("application/pdf");
+           startActivity(intent);*/
         }
 
         else if (id == R.id.nav_share) {

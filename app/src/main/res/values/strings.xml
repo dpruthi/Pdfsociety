@@ -225,6 +225,91 @@
 
     <string name="Select_Pdf">Select Pdf</string>
 
+    <string-array name="Categories">
+
+        <item>Architecture</item>
+        <item>Arts</item>
+        <item>Ayurvedic Medicine Surgery</item>
+        <item>Business Administration</item>
+        <item>Commerce</item>
+        <item>Computer Applications</item>
+        <item>Dental Surgery</item>
+        <item>Engineering / Technology</item>
+        <item>Fisheries Science</item>
+        <item>Homoeopathic Medicine and Surgery</item>
+        <item>Laws</item>
+        <item>Library Science</item>
+        <item>Mass Communications</item>
+        <item>Medicine and Surgery</item>
+        <item>Nursing</item>
+        <item>Pharmacy</item>
+        <item>Physical Education</item>
+        <item>Physiotherapy</item>
+        <item>Science</item>
+        <item>Social Work</item>
+        <item>Veterinary Science Animal Husbandry</item>
+        <item>Medicine</item>
+        <item>Medicine in Homoeopathy</item>
+        <item>Philosophy</item>
+        <item>Doctorate of Medicine</item>
+        <item>Architecture</item>
+        <item>Arts</item>
+        <item>Business Administration</item>
+        <item>Chirurgiae</item>
+        <item>Commerce</item>
+        <item>Computer Applications</item>
+        <item>Dental Surgery</item>
+        <item>Design</item>
+        <item>Education</item>
+        <item>Fine Arts</item>
+        <item>Library Science</item>
+        <item>Science in Agriculture</item>
+        <item>Surgery</item>
+        <item>Comedy</item>
+        <item>Drama</item>
+        <item> Horror fiction</item>
+        <item> Literary realism</item>
+        <item> Romance</item>
+        <item> Satire</item>
+        <item> Tragedy</item>
+        <item> Tragicomedy</item>
+        <item> Fantasy</item>
+        <item> Mythology</item>
+        <item> Adventure</item>
+        <item> Science fiction</item>
+        <item>Action and Adventure</item>
+        <item> Romance</item>
+        <item> Mystery</item>
+        <item>Horror</item>
+        <item> Self help</item>
+        <item> Health</item>
+        <item>Guide</item>
+        <item> Travel</item>
+        <item> Children's</item>
+        <item> Religion, Spirituality and New Age</item>
+        <item> Science</item>
+        <item> History</item>
+        <item> Anthology</item>
+        <item> Poetry</item>
+        <item> Encyclopedias</item>
+        <item> Dictionaries</item>
+        <item> Comics</item>
+        <item> Art</item>
+        <item> Cookbooks</item>
+        <item> Diaries</item>
+        <item> Journals</item>
+        <item> Prayer books</item>
+        <item> Series</item>
+        <item> Trilogy</item>
+        <item> Biographies</item>
+        <item> Autobiographies</item>
+        <item>Others</item>
+    </string-array>
+
+
+
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
