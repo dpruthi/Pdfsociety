@@ -40,6 +40,7 @@ public class MyUploadService extends MyBaseTaskService {
     private static String uploaddate;
     public static String pdfkey;
     public static String pdfname;
+    public static String category;
 
     public StorageReference mStorageRef;
     public DatabaseReference dbref;
@@ -61,6 +62,7 @@ public class MyUploadService extends MyBaseTaskService {
             username = intent.getStringExtra("username");
             pdfkey = intent.getStringExtra("pdfkey");
             pdfname = intent.getStringExtra("pdfname");
+            category = intent.getStringExtra("category");
 
             Uri fileUri = intent.getParcelableExtra(EXTRA_FILE_URI);
             uploadFromUri(fileUri);
@@ -183,7 +185,8 @@ public class MyUploadService extends MyBaseTaskService {
                 username,
                 pdfsize,
                 uploaddate,
-                pdfkey
+                pdfkey,
+                category
         );
         Log.d(TAG, "" + pdf);
 

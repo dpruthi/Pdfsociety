@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -28,6 +30,7 @@ public class UploadPdfActivity extends Progressdialog {
     TextView selectPdf;
     EditText pdfName;
     TextInputLayout textInputPdfName;
+    private AutoCompleteTextView category;
 
     private static final int RC_TAKE_PDF = 101;
     private Uri mFileUri = null;
@@ -69,6 +72,11 @@ public class UploadPdfActivity extends Progressdialog {
         selectPdf = (TextView) findViewById(R.id.selectPdfTextView);
         pdfName = (EditText) findViewById(R.id.pdfNameEditText);
         textInputPdfName = (TextInputLayout)findViewById(R.id.pdfnameTextInputLayout);
+        category = (AutoCompleteTextView)findViewById(R.id.ac_city);
+        category.setThreshold(1);
+        String[] categories = getResources().getStringArray(R.array.Categories);
+        ArrayAdapter<String> category_adapter = new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,categories);
+        category.setAdapter(category_adapter);
     }
 
     public void uploadbtnClicked(View v){
@@ -101,6 +109,7 @@ public class UploadPdfActivity extends Progressdialog {
                     selectPdf.setError(null);
                     pdfName.setError(null);
                     textInputPdfName.setVisibility(View.VISIBLE);
+                    category.setVisibility(View.VISIBLE);
                     selectPdf.setText(getFileName(mFileUri.getLastPathSegment()) +" selected");
                     pdfName.setText(getFileName(mFileUri.getLastPathSegment()));
                 }
@@ -131,6 +140,7 @@ public class UploadPdfActivity extends Progressdialog {
                 .putExtra("username",username)
                 .putExtra("pdfkey", pdfkey)
                 .putExtra("pdfname", pdfname)
+                .putExtra("category",category.getText().toString().trim())
                 .setAction(MyUploadService.ACTION_UPLOAD));
 
         Toast.makeText(this, getString(R.string.progress_uploading), Toast.LENGTH_LONG).show();

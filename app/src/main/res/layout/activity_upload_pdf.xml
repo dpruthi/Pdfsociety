@@ -58,6 +58,14 @@
             android:layout_weight="0" />
     </android.support.design.widget.TextInputLayout>
 
+    <AutoCompleteTextView
+        android:id="@+id/ac_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:hint="Select Pdf category"
+        android:visibility="gone"/>
+
     <Button
         android:theme="@style/ButtonStyle"
         android:layout_marginTop="50dp"
