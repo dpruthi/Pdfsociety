@@ -4,8 +4,12 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.design.widget.TextInputLayout;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.text.TextUtils;
+import android.text.method.QwertyKeyListener;
+import android.text.method.TextKeyListener;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -76,7 +80,21 @@ public class UploadPdfActivity extends Progressdialog {
         category.setThreshold(1);
         String[] categories = getResources().getStringArray(R.array.Categories);
         ArrayAdapter<String> category_adapter = new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,categories);
+        categoryListener();
         category.setAdapter(category_adapter);
+    }
+
+    private void categoryListener(){
+        category.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if(category.getText().toString().trim().length() == 0){
+                    category.showDropDown();
+                }
+                return false;
+            }
+        });
+        
     }
 
     public void uploadbtnClicked(View v){

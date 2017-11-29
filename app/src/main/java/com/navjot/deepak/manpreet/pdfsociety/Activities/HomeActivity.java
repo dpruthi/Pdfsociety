@@ -1,7 +1,5 @@
 package com.navjot.deepak.manpreet.pdfsociety.Activities;
 
-import android.content.pm.PackageManager;
-import android.provider.MediaStore;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.content.Intent;
@@ -23,11 +21,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.TextView;
 import android.widget.Toast;
-import com.navjot.deepak.manpreet.pdfsociety.Activities.MadeByActivity;
-import com.navjot.deepak.manpreet.pdfsociety.Activities.UploadPdfActivity;
-import android.widget.Toast;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.navjot.deepak.manpreet.pdfsociety.Fragments.MyPdfsFragment;
 import com.navjot.deepak.manpreet.pdfsociety.Fragments.RecentPdfsFragment;
@@ -170,18 +165,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
 
-        if (id == R.id.nav_downloads){
-
-           /* Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.oppo.filemanager").addCategory(".pdf");
-            if (launchIntent != null) {
-                startActivity(launchIntent);//null pointer check in case package name was not found
-            }
-*/
-
-         /*  Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-           intent.setType("application/pdf");
-           startActivity(intent);*/
+        if (id == R.id.nav_category){
+          startActivity(new Intent(HomeActivity.this, Category.class));
         }
+
+
 
         else if (id == R.id.nav_share) {
                     ApplicationInfo applicationInfo = getApplicationContext().getApplicationInfo();
